@@ -115,7 +115,7 @@ function checkboxes(numberOfRuns) {
     }    
 
     if (checked.getAttribute("checked") !== "") {      
-      if (Number(db[name]) < max || !localStorage[name]) {
+      if (Number(db[name]) < max || !db[name]) {
         updateFirebase(name, max);
       }     
     }
@@ -283,7 +283,3 @@ function updateFirebase(name, value) {
 }
 
 highscoreGlobal();
-
-
-
-//updateFirebase("jo", 4);
